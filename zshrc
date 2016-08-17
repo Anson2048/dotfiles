@@ -1,0 +1,129 @@
+# Path to your oh-my-zsh installation.
+export ZSH=/home/user/.oh-my-zsh
+
+# Set Charset
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="bira"
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git proxychains tldr jhipster autojump incr common-aliases history alias-tips command-not-found zsh_reload sudo)
+
+# User configuration
+# export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+# export MANPATH="/usr/local/man:$MANPATH"
+
+source $ZSH/oh-my-zsh.sh
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias -s tgz='tar zxvf'
+
+alias vpn-start="/etc/init.d/autovpn start"
+alias vpn-stop="/etc/init.d/autovpn stop"
+alias vpn-restart="/etc/init.d/autovpn restart"
+
+alias d="sudo docker"
+alias vm-start="cd ~/dev && vagrant up && cd -"
+
+export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
+
+# Set OpenResty path
+export PATH="$PATH:/opt/openresty/nginx/sbin:/opt/openresty/bin:/opt/openresty/luajit/bin"
+export LD_LIBRARY_PATH=/usr/local/li
+
+# odps
+export PATH="$PATH:/opt/odps/bin"
+
+export NVM_DIR="/home/user/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+#THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
+[[ -s "/home/user/.jenv/bin/jenv-init.sh" ]] && source "/home/user/.jenv/bin/jenv-init.sh" && source "/home/user/.jenv/commands/completion.sh"
+
+export ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/
+
+export M2_HOME=/home/user/.jenv/candidates/maven/current
+export PATH="$PATH:$ACTIVATOR_HOME"
+
+ES_HOME="/opt/elk/elasticsearch-2.3.5"
+ES_DATA_PATH="/var/data/elasticsearch"
+ES_LOG_PATH="/var/log/elasticsearch"
+ES_HEAP_SIZE=1024
+ES_MAX_OPEN_FILES=32000
+
+# Path to main config
+CONFIG="$ES_HOME/config/elasticsearch.yml"
+
+export PATH="$PATH:$ES_HOME/bin"
+
+export PATH="$PATH:/opt/elk/kibana-4.5.4-linux-x64/bin"
