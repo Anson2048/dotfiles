@@ -6,9 +6,14 @@
 - clean: ['~']
 
 - link:
-    ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
     ~/.npmrc: npmrc
+
+# Zsh files
+- link:
+    ~/.zshrc: zsh/zshrc
+    ~/.oh-my-zsh/custom/plugins/proxychains: zsh/plugins/proxychains
+    ~/.oh-my-zsh/custom/plugins/tldr: zsh/plugins/tldr
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
