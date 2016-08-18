@@ -15,5 +15,8 @@
     ~/.oh-my-zsh/custom/plugins/proxychains: zsh/plugins/proxychains
     ~/.oh-my-zsh/custom/plugins/tldr: zsh/plugins/tldr
 
+- link:
+    ~/.config/xfce4/terminal/terminalrc: terminalrc
+
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
