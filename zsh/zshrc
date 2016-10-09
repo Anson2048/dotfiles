@@ -53,7 +53,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-completions zsh-autosuggestions proxychains tldr jhipster autojump incr common-aliases history alias-tips command-not-found zsh_reload sudo)
+plugins=(git zsh-completions zsh-autosuggestions proxychains tldr jhipster autojump incr common-aliases history alias-tips command-not-found zsh_reload sudo docker_alias)
 
 # User configuration
 # export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
@@ -88,20 +88,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias -s tgz='tar zxvf'
 
-alias vpn-start="/etc/init.d/autovpn start"
-alias vpn-stop="/etc/init.d/autovpn stop"
-alias vpn-restart="/etc/init.d/autovpn restart"
-
-alias d="sudo docker"
-alias vm-start="cd ~/dev && vagrant up && cd -"
-
 export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
-
-# Set OpenResty path
-export PATH="$PATH:/opt/openresty/nginx/sbin:/opt/openresty/bin:/opt/openresty/luajit/bin"
-export LD_LIBRARY_PATH=/usr/local/li
-
-# odps
 export PATH="$PATH:/opt/odps/bin"
 
 export NVM_DIR="/home/user/.nvm"
@@ -127,3 +114,10 @@ CONFIG="$ES_HOME/config/elasticsearch.yml"
 export PATH="$PATH:$ES_HOME/bin"
 
 export PATH="$PATH:/opt/elk/kibana-4.5.4-linux-x64/bin"
+alias dm="docker-machine"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+alias docker-dev='docker $(docker-machine config dev)'
+
+
